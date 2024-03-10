@@ -6,8 +6,10 @@ def codifica_numeri_naturali(n: int) -> list:
     binary.insert(0, n%2)
     return binary
 
-try:
-    x = input("Inserisci un numero da convertire in binario: ")
-    print(codifica_numeri_naturali(int(x)))
-except ValueError:
-    print("Devi inserire un intero!")
+while True:
+    try:
+        x = input("Inserisci un numero da convertire in binario: ")
+        print(codifica_numeri_naturali(int(x)))
+        break
+    except ValueError:
+        print("Devi inserire un intero!")
